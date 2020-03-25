@@ -2,10 +2,16 @@ package com.learning.spring.first.app;
 
 public class CricketCoach implements Coach {
 	private FortuneService fortuneService;
-	public CricketCoach(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
-	}	
+		
 	
+//	public FortuneService getFortuneService() {
+//		return fortuneService;
+//	}
+
+	public void setFortuneService(FortuneService thefortuneService) {
+		fortuneService = thefortuneService;
+	}
+
 	@Override
 	public String getDailyWorkout() {
 		return "spend 15 minutes on batting practice. "; 

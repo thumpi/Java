@@ -11,8 +11,8 @@
 		class="com.learning.spring.first.app.HappyFortuneService"></bean>
 	<bean id="myCoach"
 		class="com.learning.spring.first.app.CricketCoach">
-		<constructor-arg ref="myFortune" />
-	</bean>
+		<property name="fortuneService" ref="myFortune"/>
+			</bean>
 	<bean id="fCoach"
 		class="com.learning.spring.first.app.FootballCoach">
 		<constructor-arg ref="myFortune" />
