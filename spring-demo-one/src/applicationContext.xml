@@ -12,6 +12,8 @@
 	<bean id="myCoach"
 		class="com.learning.spring.first.app.CricketCoach">
 		<property name="fortuneService" ref="myFortune"/>
+		<property name="email" value="myemail@email.com"/>
+		<property name="team" value="India"/>
 			</bean>
 	<bean id="fCoach"
 		class="com.learning.spring.first.app.FootballCoach">
