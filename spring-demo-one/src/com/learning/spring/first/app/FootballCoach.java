@@ -4,7 +4,7 @@ public class FootballCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-			return "spend 20 minutes on balling practice.";
+			return "spend 20 minutes on running practice.";
 	}
 
 }
