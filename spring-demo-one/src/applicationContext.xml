@@ -13,16 +13,14 @@
 		class="com.learning.spring.first.app.RandomFortuneService">
 	</bean>
 	<bean id="myCoach"
-		class="com.learning.spring.first.app.CricketCoach">
+		class="com.learning.spring.first.app.CricketCoach" scope = "prototype">
 		<property name="fortuneService" ref="myFortune"/>
 		<property name="email" value="${bla.email}"/>
 		<property name="team" value="${bla.team}"/>
+		
 	</bean>
 	<bean id="fCoach"
 		class="com.learning.spring.first.app.FootballCoach">
 		<constructor-arg ref="myFortune" />
 	</bean>
-
-
-
 </beans> 
