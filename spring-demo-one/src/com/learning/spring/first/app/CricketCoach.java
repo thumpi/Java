@@ -31,4 +31,10 @@ public class CricketCoach implements Coach {
 		// TODO Auto-generated method stub
 		return  fortuneService.getFortune();
 	}
+	public void initialization() {
+		System.out.println("initialized");
+	}
+	public void destroyingbean () {
+		System.out.println("destroyed");
+	}
 }

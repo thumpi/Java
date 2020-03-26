@@ -13,7 +13,10 @@
 		class="com.learning.spring.first.app.RandomFortuneService">
 	</bean>
 	<bean id="myCoach"
-		class="com.learning.spring.first.app.CricketCoach" scope = "prototype">
+		class="com.learning.spring.first.app.CricketCoach"
+				init-method="initialization"
+		destroy-method="destroyingbean">
+		
 		<property name="fortuneService" ref="myFortune"/>
 		<property name="email" value="${bla.email}"/>
 		<property name="team" value="${bla.team}"/>
