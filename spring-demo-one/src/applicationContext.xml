@@ -9,21 +9,6 @@
     <!-- load the properties file -->
     <context:property-placeholder location = "classpath:sport.properties"/>
 
-	<bean id="myFortune"
-		class="com.learning.spring.first.app.RandomFortuneService">
-	</bean>
-	<bean id="myCoach"
-		class="com.learning.spring.first.app.CricketCoach"
-				init-method="initialization"
-		destroy-method="destroyingbean">
-		
-		<property name="fortuneService" ref="myFortune"/>
-		<property name="email" value="${bla.email}"/>
-		<property name="team" value="${bla.team}"/>
-		
-	</bean>
-	<bean id="fCoach"
-		class="com.learning.spring.first.app.FootballCoach">
-		<constructor-arg ref="myFortune" />
-	</bean>
+<!-- annotation -->
+	<context:component-scan base-package="com.learning.spring.first.app"></context:component-scan>
 </beans> 
