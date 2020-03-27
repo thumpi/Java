@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 	private FortuneService fortuneService;
 	
-@Autowired
+	// this will also work fine as the latest version of spring framework doesnt need to explicitly autowire.
+	// at the same time, if there are more than one constructor, then we have mention, which one to use, by adding autowire.
+	//@Autowired
 	public TennisCoach(FortuneService fortuneService) {
 		super();
 		this.fortuneService = fortuneService;
