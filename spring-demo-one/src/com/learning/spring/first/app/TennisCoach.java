@@ -29,7 +29,7 @@ public class TennisCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return("Practice for two hours " + email + team +  this.fortuneService.getFortune());
+		return("Practice for two hours " + email + "  " + team + "  " +  this.fortuneService.getFortune());
 	}
 
 	@Override
