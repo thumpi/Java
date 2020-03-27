@@ -1,14 +1,13 @@
 package com.learning.spring.first.app;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 public class MyApp {
 
 	
 	public static void main(String[] args) {
 			
 		//load the spring configuration file
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		// retrieve bean from spring container
 		Coach theCoach1 = context.getBean("tennisCoach",Coach.class);
 		Coach theCoach2 = context.getBean("tennisCoach",Coach.class);		
