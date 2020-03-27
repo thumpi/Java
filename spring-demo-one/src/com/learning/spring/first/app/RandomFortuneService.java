@@ -2,6 +2,8 @@ package com.learning.spring.first.app;
 
 import java.util.*;
 
+import org.springframework.stereotype.Component;
+@Component
 public class RandomFortuneService implements FortuneService {
 	
 	ArrayList<String> list;
