@@ -1,13 +1,16 @@
 package com.learning.spring.first.app;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Scope("prototype")
-//@Scope("singleton")
+
+@Scope("singleton")
 @Component
 public class TennisCoach implements Coach {
 	//
@@ -33,6 +36,14 @@ public class TennisCoach implements Coach {
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	@PostConstruct
+	public void onInitilalize() {
+		System.out.println("Initilalize");
+	}
+	@PreDestroy
+	public void ondestrooy() {
+		System.out.println("ondestrooy");
 	}
 
 }
